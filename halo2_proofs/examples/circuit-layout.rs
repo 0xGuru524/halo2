@@ -205,7 +205,7 @@ impl<F: Field> Circuit<F> for MyCircuit<F> {
          *   ...       ...    ...  0
          * ]
          */
-        meta.lookup("lookup", |meta| {
+        meta.lookup_any("lookup", |meta| {
             let a_ = meta.query_any(a, Rotation::cur());
             vec![(a_, sl)]
         });

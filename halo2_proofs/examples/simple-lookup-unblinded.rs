@@ -66,7 +66,7 @@ fn main() {
             meta.enable_equality(config.instance);
             meta.enable_equality(config.other_advice);
 
-            meta.lookup("", |cs| {
+            meta.lookup_any("", |cs| {
                 let qlookup = cs.query_selector(config.qlookup);
                 let not_qlookup = Expression::Constant(F::ONE) - qlookup.clone();
                 let (default_x, default_y): (F, F) = (F::from(0), F::from(0));

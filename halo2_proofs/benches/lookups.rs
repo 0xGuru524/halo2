@@ -66,27 +66,27 @@ fn criterion_benchmark(c: &mut Criterion) {
                 Constraints::with_selector(dummy_selector, Some(constraints))
             });
 
-            meta.lookup("lookup", |meta| {
+            meta.lookup_any("lookup", |meta| {
                 let advice = meta.query_advice(config.advice, Rotation::cur());
                 vec![(advice, config.table)]
             });
 
-            meta.lookup("lookup", |meta| {
+            meta.lookup_any("lookup", |meta| {
                 let advice = meta.query_advice(config.advice, Rotation::cur());
                 vec![(advice, config.table)]
             });
 
-            meta.lookup("lookup", |meta| {
+            meta.lookup_any("lookup", |meta| {
                 let advice = meta.query_advice(config.advice, Rotation::cur());
                 vec![(advice, config.table)]
             });
 
-            meta.lookup("lookup", |meta| {
+            meta.lookup_any("lookup", |meta| {
                 let advice = meta.query_advice(config.advice, Rotation::cur());
                 vec![(advice, config.table)]
             });
 
-            meta.lookup("lookup", |meta| {
+            meta.lookup_any("lookup", |meta| {
                 let advice = meta.query_advice(config.advice, Rotation::cur());
                 vec![(advice, config.table)]
             });

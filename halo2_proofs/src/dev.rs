@@ -1726,7 +1726,7 @@ mod tests {
                 let table = meta.lookup_table_column();
                 meta.annotate_lookup_column(table, || "Table1");
 
-                meta.lookup("lookup", |cells| {
+                meta.lookup_any("lookup", |cells| {
                     let a = cells.query_advice(a, Rotation::cur());
                     let q = cells.query_selector(q);
 

@@ -37,7 +37,7 @@ impl Circuit<Fp> for TestCircuit {
             advice: meta.advice_column(),
         };
 
-        meta.lookup("lookup", |meta| {
+        meta.lookup_any("lookup", |meta| {
             let selector = meta.query_selector(config.selector);
             let not_selector = Expression::Constant(Fp::ONE) - selector.clone();
             let advice = meta.query_advice(config.advice, Rotation::cur());
